@@ -1,15 +1,16 @@
 import React from 'react'
 
 class Pet extends React.Component {
+  
   render() {
-    const { pet, onAdoptPet} = this.props
+    const { pet, onAdoptPet } = this.props
     return (
       <div className="card">
         <div className="content">
           <a className="header">
-            {pet.gender === "female" ? '♀' : '♂'}
+         {pet.gender === "male" ? '♂' : '♀' }
              {/*'♀' OR '♂' */}
-            {pet.name}
+          {pet.name}
            </a>
           <div className="meta">
             <span className="date">{pet.type}</span>
@@ -20,11 +21,13 @@ class Pet extends React.Component {
           </div>
         </div>
         <div className="extra content">
-          {pet.isAdopted ? 
-           <button className="ui disabled button">Already adopted</button>
-            :
-          <button onClick={ () => onAdoptPet(pet.id)} className="ui primary button">Adopt pet</button>
-        }
+             {pet.isAdopted ? <button className="ui disabled button">Already adopted</button> :
+               <button onClick={() => onAdoptPet(pet.id)} className="ui primary button">Adopt pet</button>
+             }
+                
+              
+              
+           
         </div>
       </div>
     )

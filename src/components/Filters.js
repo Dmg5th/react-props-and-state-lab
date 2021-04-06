@@ -2,9 +2,9 @@ import React from 'react'
 
 class Filters extends React.Component {
   render() {
-    const { onChangeType, onFindPetsClick} = this.props
+    const { onChangeType, onFindPetsClick } = this.props
     return (
-      <div className="ui form">
+     <div className="ui form">
         <h3>Animal type</h3>
         <div className="field">
           <select onChange={onChangeType} name="type" id="type">
